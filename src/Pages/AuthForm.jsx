@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { z } from "zod";
 import { useNavigate } from "react-router-dom";
 const BASE_URL = import.meta.env.VITE_BASE_URL;
+console.log("BASE_URL", BASE_URL);
 
 const loginSchema = z.object({
     email: z.string().min(1, { message: "Email Address is required" }).email({ message: "Invalid email format" }),
